@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: <%= ENV['DATABASE_URL']%>
-  # username: astro_connect_banckends
-  # password: <%= ENV['ASTRO_CONNECT_BANCKENDS_DATABASE_PASSWORD'] %>
+  database: astro_connect_banckends_production
+  username: astro_connect_banckends
+  password: <%= ENV['ASTRO_CONNECT_BANCKENDS_DATABASE_PASSWORD'] %>
