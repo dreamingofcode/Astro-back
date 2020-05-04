@@ -6,7 +6,7 @@ class User < ApplicationRecord
     has_many :posts
 
     validates :email,:name,uniqueness:{case_sensitive:false}
-    validates :age,:numericality => { greater_than_or_equal_to: 18, less_than: 60 }
+    # validates :age,:numericality => { greater_than_or_equal_to: 18, less_than: 60 }
     # post "/auth", to: 'auth#create'
 
 
