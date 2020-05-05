@@ -56,7 +56,7 @@ class PostsController < ApplicationController
     
       private def respond_to_post()
         if @post.valid?()
-           
+           puts @post
           post_serializer = PostSerializer.new(post: @post, user: @user)
           render json: post_serializer.serialize_new_post()
         else

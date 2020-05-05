@@ -23,6 +23,7 @@ class Api::V1::UsersController < ApplicationController
         if @user.update(user_params_update)
             render json:@user
         else
+          
             render json: {error: 'Failed to UPDATE User, check credentials and try again!'}, status: :not_acceptable
         end
       end
