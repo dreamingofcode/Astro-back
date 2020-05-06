@@ -35,7 +35,7 @@ module AstroConnectBanckends
     config.api_only = true
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'https://astr-connection.herokuapp.com/'
+        origins '*'
         resource '*',
                  :headers => :any,
                 #  :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
