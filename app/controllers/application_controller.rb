@@ -13,7 +13,7 @@ class ApplicationController < ActionController::API
       'Access-Control-Allow-Headers' => 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
     }
   end
-  
+end
   
   # config/routes.rb
   # Last route definition code line
