@@ -37,10 +37,10 @@ end
 private
 def user_params
     params.require(:user).permit(:name,:email,:password,:password_confirmation,:bio,:birthDate,:gender,:sexualOrientation,:zodiac,:age,:profile_image)
-    # :image_file_name
+
 end
 private
 def user_params_update
-    params.require(:user).permit(:name,:email,:password,:password_confirmation,:bio,:birthDate,:gender,:sexualOrientation,:zodiac,:age,:posts,:profile_image,:user_one_chatrooms,:user_two_chatrooms)
-    # :image_file_name
+    params.require(:user).permit(:name,:email,:password,:password_confirmation,:bio,:birthDate,:gender,:sexualOrientation,:zodiac,:age,:posts,:profile_image)#:user_one_chatrooms,:user_two_chatrooms
+
 end
