@@ -1,5 +1,6 @@
 class User < ApplicationRecord
     has_secure_password
+    has_many :chatrooms
     has_many :user_one_chatrooms, :class_name => 'ChatRoom', :foreign_key => "user1_id",dependent: :destroy
     has_many :user_two_chatrooms, :class_name => 'ChatRoom', :foreign_key => "user2_id",dependent: :destroy
     has_many :messages, through: :chatrooms,dependent: :destroy

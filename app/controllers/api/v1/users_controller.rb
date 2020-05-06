@@ -7,7 +7,7 @@ class Api::V1::UsersController < ApplicationController
 
     def show
         user= User.find_by(id: params[:id])
-render json:user
+         render json: user
     end
 
     def create
@@ -19,7 +19,7 @@ render json:user
         end
     end
     def update
-        @user= User.find(params[:id])
+        @user= User.find_by(id: params[:id])
         if @user.update(user_params_update)
             render json:@user
         else
@@ -28,7 +28,7 @@ render json:user
         end
       end
       def destroy
-        @user=User.find(params[:id])
+        @user=User.find_by(id: params[:id])
         @user.destroy
         render json: @user
       end
